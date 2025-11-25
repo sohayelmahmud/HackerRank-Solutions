@@ -9,8 +9,8 @@
 
 ## Covered Topics
 Go to [Detailed Map](#detailed-map-to-the-repository) to find the solutions for each topic.
-- [Python](#Python)
-- 30 Days of Code (Python)
+- [Python](#Python) - uploading...
+- [30 Days of Code (Python)](#30-days-of-code) - uploading...
 
 ---
 
@@ -34,7 +34,7 @@ Go to [Detailed Map](#detailed-map-to-the-repository) to find the solutions for 
   - [15 Numpy]
   - [16 Debugging]
 
-- **30 Days of Code:** Uploading...
+### 30 Days of Code:
   - [Python Solutions](https://github.com/sohayelmahmud/HackerRank-Solutions/tree/main/30%20Days%20of%20Code%20Python)
 
 ---
