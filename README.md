@@ -9,7 +9,7 @@
 
 ## Covered Topics
 Go to [Detailed Map](#detailed-map-to-the-repository) to find the solutions for each topic.
-- [Python](###Python:)
+- [Python](#Python)
 - 30 Days of Code (Python)
 
 ---
