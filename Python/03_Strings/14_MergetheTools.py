@@ -1,5 +1,5 @@
 '''
-title     : The Minion Game
+title     : Merge the Tools
 subdomain : Strings
 domain    : Python
 author    : Sohayel Mahmud
