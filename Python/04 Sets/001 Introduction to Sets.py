@@ -1,3 +1,11 @@
+'''
+title     : Introduction to Sets
+subdomain : Sets
+domain    : Python
+author    : Sohayel Mahmud
+created   : 26 Nov, 2025
+'''
+
 import statistics
 
 def average(array):
