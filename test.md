@@ -16,7 +16,7 @@
    - [Lists](Python/02_BasicDataTypes/01_Lists.py)
    - [Tuples](Python/02_BasicDataTypes/02_Tuples.py)
    - [List Comprehensions](Python/02_BasicDataTypes/03_ListComprehensions.py)
-   - [Find the Second Largest Number](Python/02_BasicDataTypes/04_FindtheSecondLargestNumber.py)
+   - [Find the Runner-Up Score](Python/02_BasicDataTypes/04_FindtheRunnerUpScore.py)
    - [Nested Lists](Python/02_BasicDataTypes/05_NestedLists.py)
    - [Finding the percentage](Python/02_BasicDataTypes/06_Findingthepercentage.py)
 
