@@ -1,0 +1,26 @@
+#!/bin/python3
+
+# import math
+# import os
+# import random
+# import re
+# import sys
+
+#
+# Complete the 'solve' function below.
+#
+# The function accepts following parameters:
+#  1. DOUBLE meal_cost
+#  2. INTEGER tip_percent
+#  3. INTEGER tax_percent
+#
+
+meal_cost = float(input())
+tip_percent = int(input())
+tax_percent = int(input())
+
+tip = meal_cost * tip_percent / 100
+tax = meal_cost * tax_percent / 100
+total = meal_cost + tip + tax
+
+print(str(round(total)))
