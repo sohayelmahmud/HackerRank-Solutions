@@ -19,7 +19,7 @@ def generate_nested_list(target_folder):
     target_path = os.path.join(root_dir, target_folder)
 
     if not os.path.exists(target_path):
-        out(f"❌ Error: Folder '{target_folder}' not found at {target_path}")
+        out(f"Error: Folder '{target_folder}' not found at {target_path}")
         return
 
     output_lines = []
@@ -32,7 +32,7 @@ def generate_nested_list(target_folder):
     try:
         sub_items = sorted(os.listdir(target_path))
     except Exception as e:
-        out(f"❌ Error reading directory: {e}")
+        out(f"Error reading directory: {e}")
         return
 
     for item in sub_items:
@@ -45,8 +45,8 @@ def generate_nested_list(target_folder):
                 continue
 
             topic_title = format_title_from_name(item)
-            output_lines.append(f"    <!-- {topic_title} -->")
-            output_lines.append(f"    <details>")
+            output_lines.append(f"   <!-- {topic_title} -->")
+            output_lines.append(f"   <details>")
             output_lines.append(f"      <summary>{topic_title}</summary>")
             output_lines.append(f"      <ol>")
 
@@ -61,7 +61,7 @@ def generate_nested_list(target_folder):
                     output_lines.append(f'        <li><a href="{rel_link}">{file_title}</a></li>')
 
             output_lines.append(f"      </ol>")
-            output_lines.append(f"    </details>\n")
+            output_lines.append(f"   </details>\n")
 
     output_lines.append("  </blockquote>\n</details>")
 
@@ -70,7 +70,7 @@ def generate_nested_list(target_folder):
     with open(output_file, "w", encoding="utf-8") as f:
         f.write("\n".join(output_lines))
 
-    out(f"✨ Successfully generated nested list inside '{os.path.basename(output_file)}'!")
+    out(f"Successfully generated nested list inside '{os.path.basename(output_file)}'!")
 
 def solve():
     sys.stdout.write("Enter root folder name to generate list (e.g., Python, 30DaysOfCode): ")

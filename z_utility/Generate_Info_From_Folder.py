@@ -1,81 +1,75 @@
 """
-Title                : Generate_Info_From_Folder
+Title                : Generate_Info_From_Folder (Dynamic Name & Path)
 Author               : Sohayel Mahmud
-Date of Creation     : 24 June 2024
+Date of Modification : 01 June 2026
 """
-
 
 import os
 import re
 import sys
 
-info_file_name = "30DaysOfCode.txt"
+# User preferred safe input format
+input_safe = lambda: sys.stdin.readline().strip()
 
-
-def get_valid_subdomain_name(given_name):
-    # used to create folder names (only letters, numbers, underscore)
+def valid_name(given_name):
     return re.sub(r"[^\w]", "", given_name)
 
-def clean_problem_title(title_with_serial):
-    """
-    removes special characters from the entire title, keeping numbers and letters.
-    """
-    # [^a-zA-Z0-9\s_] means: remove everything except letters, numbers, spaces, and underscore
-    return re.sub(r"[^a-zA-Z0-9\s_]", "", title_with_serial).strip()
-
-
 def generate_info_from_directory():
-    """
-    reads sub-folders and files from the current directory and generates
-    output in the required format.
-    """
+    # Prompt the user to enter the target folder name from the root
+    print("Enter the target folder name from root (e.g., Python, 30DaysOfCode): ", end="", flush=True)
+    target_folder = input_safe()
 
-    current_directory = os.getcwd()
+    # Get the absolute path of the directory where this script file actually resides
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+
+    # Assuming the target folder is located in the current working directory
+    current_working_dir = os.getcwd()
+    target_path = os.path.join(current_working_dir, target_folder)
+
+    # Check if the requested folder actually exists
+    if not os.path.exists(target_path) or not os.path.isdir(target_path):
+        print(f"Error: Folder '{target_folder}' not found in the current working directory.")
+        sys.exit()
+
     output_lines = []
 
-    # os.walk traverses the directory tree
-    for root, dirs, files in os.walk(current_directory, topdown=True):
+    # Traverse only through the sub-folders of the specified target directory
+    for root, dirs, files in os.walk(target_path, topdown=True):
 
-        # skip the current directory, only process sub-folders
-        if root == current_directory:
+        # Skip the root of the target directory to only process its children
+        if root == target_path:
             continue
 
-        # 1. create subdomain name
         subdomain_name = os.path.basename(root)
         problem_titles = []
         files.sort()
 
         for filename in files:
-            # process only code files (e.g., .py, .cpp, .js)
+            # Filter valid code file extensions
             if filename.endswith(('.py', '.cpp', '.c', '.java', '.js', '.css', '.html')):
-
-                # remove file extension
+                # Remove file extension to extract the base title
                 base_title = os.path.splitext(filename)[0]
+                problem_titles.append(f'"{base_title}"')
 
-                # cleaning function, apply it if needed
-                cleaned_title = base_title
-
-                # enclose in double quotes for output format
-                problem_titles.append(f'"{cleaned_title}"')
-
-        # 3. generate output format
         if problem_titles:
-            # subdomain name
+            # Format output lines to match info specification
             output_lines.append(f'{subdomain_name}')
-
-            # list of problems (e.g., ["01 Day 00 Hello World", "02 Data Types", ...])
-            output_lines.append(f'[{", ".join(problem_titles)}]')
-
-    # output
+            output_lines.append(f'[{", ".join(problem_titles)}]\n')
 
     if not output_lines:
-        print("error: could not find any subfolders containing code files in the current directory.")
+        print(f"Error: Could not find any subfolders containing code files inside '{target_folder}'.")
         sys.exit()
 
-    print("--- generated info (copy this for python_info.txt) ---")
-    print('\n'.join(output_lines))
-    print("-------------------------------------------------------")
+    # Generate the output filename dynamically based on the target folder's name
+    output_file_name = f"{target_folder}_info.txt"
 
+    # Define the final output path strictly inside the script's own folder
+    output_file_path = os.path.join(script_directory, output_file_name)
+
+    with open(output_file_path, "w") as f:
+        f.write('\n'.join(output_lines))
+
+    print(f"\nSuccess! '{output_file_name}' has been generated and saved in the script's folder.")
 
 if __name__ == "__main__":
     generate_info_from_directory()

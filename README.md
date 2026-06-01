@@ -247,8 +247,62 @@ Go to [Detailed Map](#detailed-map-to-the-repository) to find the solutions for 
   <summary><b>30DaysOfCode</b></summary>
 
   <blockquote>
-    <!-- Python -->
-    <details>
+   <!-- C -->
+   <details>
+      <summary>C</summary>
+      <ol>
+        <li><a href="30DaysOfCode/C/Day_00_Hello_World.c">Day 00 Hello World</a></li>
+        <li><a href="30DaysOfCode/C/Day_01_Data_Types.c">Day 01 Data Types</a></li>
+        <li><a href="30DaysOfCode/C/Day_02_Operators.c">Day 02 Operators</a></li>
+        <li><a href="30DaysOfCode/C/Day_03_Intro_to_Conditional_Statements.c">Day 03 Intro to Conditional Statements</a></li>
+        <li><a href="30DaysOfCode/C/Day_04_Class_vs_Instance.c">Day 04 Class vs Instance</a></li>
+        <li><a href="30DaysOfCode/C/Day_05_Loops.c">Day 05 Loops</a></li>
+        <li><a href="30DaysOfCode/C/Day_06_Lets_Review.c">Day 06 Lets Review</a></li>
+        <li><a href="30DaysOfCode/C/Day_07_Arrays.c">Day 07 Arrays</a></li>
+        <li><a href="30DaysOfCode/C/Day_08_Dictionaries_and_Maps.c">Day 08 Dictionaries and Maps</a></li>
+        <li><a href="30DaysOfCode/C/Day_09_Recursion_3_.c">Day 09 Recursion 3 </a></li>
+        <li><a href="30DaysOfCode/C/Day_10_Binary_Numbers.c">Day 10 Binary Numbers</a></li>
+      </ol>
+    </details>
+
+   <!-- CPP -->
+   <details>
+      <summary>CPP</summary>
+      <ol>
+        <li><a href="30DaysOfCode/CPP/Day_00_Hello_World.cpp">Day 00 Hello World</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_01_Data_Types.cpp">Day 01 Data Types</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_02_Operators.cpp">Day 02 Operators</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_03_Intro_to_Conditional_Statements.cpp">Day 03 Intro to Conditional Statements</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_04_Class_vs_Instance.cpp">Day 04 Class vs Instance</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_05_Loops.cpp">Day 05 Loops</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_06_Lets_Review.cpp">Day 06 Lets Review</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_07_Arrays.cpp">Day 07 Arrays</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_08_Dictionaries_and_Maps.cpp">Day 08 Dictionaries and Maps</a></li>
+        <li><a href="30DaysOfCode/CPP/Day_09_Recursion_3_.cpp">Day 09 Recursion 3 </a></li>
+        <li><a href="30DaysOfCode/CPP/Day_10_Binary_Numbers.cpp">Day 10 Binary Numbers</a></li>
+      </ol>
+    </details>
+
+   <!-- Java -->
+   <details>
+      <summary>Java</summary>
+      <ol>
+        <li><a href="30DaysOfCode/Java/Day_00_Hello_World.java">Day 00 Hello World</a></li>
+        <li><a href="30DaysOfCode/Java/Day_01_Data_Types.java">Day 01 Data Types</a></li>
+        <li><a href="30DaysOfCode/Java/Day_02_Operators.java">Day 02 Operators</a></li>
+        <li><a href="30DaysOfCode/Java/Day_03_Intro_to_Conditional_Statements.java">Day 03 Intro to Conditional Statements</a></li>
+        <li><a href="30DaysOfCode/Java/Day_04_Class_vs_Instance.java">Day 04 Class vs Instance</a></li>
+        <li><a href="30DaysOfCode/Java/Day_05_Loops.java">Day 05 Loops</a></li>
+        <li><a href="30DaysOfCode/Java/Day_06_Lets_Review.java">Day 06 Lets Review</a></li>
+        <li><a href="30DaysOfCode/Java/Day_07_Arrays.java">Day 07 Arrays</a></li>
+        <li><a href="30DaysOfCode/Java/Day_08_Dictionaries_and_Maps.java">Day 08 Dictionaries and Maps</a></li>
+        <li><a href="30DaysOfCode/Java/Day_09_Recursion_3_.java">Day 09 Recursion 3 </a></li>
+        <li><a href="30DaysOfCode/Java/Day_10_Binary_Numbers.java">Day 10 Binary Numbers</a></li>
+      </ol>
+    </details>
+
+   <!-- Python -->
+   <details>
       <summary>Python</summary>
       <ol>
         <li><a href="30DaysOfCode/Python/Day 00 Hello, World.py">Day 00 Hello, World</a></li>
